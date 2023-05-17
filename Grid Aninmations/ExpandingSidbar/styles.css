@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+
+#grid {
+    height:100vh;
+}
+
+#left {
+    background: crimson;
+}
+
+#right {
+    background: navajowhite ;
+    border: 3rem solid rgb(0 0 0 / 10%);
+}
+
+#grid:has(#left:hover) {
+    grid-template-columns: 30% auto;
+}
+
+#grid {
+    transition: 300ms;
+    display: grid;
+    grid-template-columns: var(--left, 48px) auto;
+}
+
+#grid:has(#left:hover){
+    --left:30%;
+}
